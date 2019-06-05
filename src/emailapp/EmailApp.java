@@ -6,15 +6,15 @@ public class EmailApp {
 
     public static void  main(String[] args){
         //Email eml = new Email("Jhon", "Smith");
+        Scanner in = new Scanner(System.in);
 
         System.out.println("Enter Name : ");
-        Scanner name= new Scanner(System.in);
-        String nameChoice = name.next();
-        System.out.println("Enter Lastname : ");
-        Scanner lastname= new Scanner(System.in);
-        String lastnameChoice = lastname.next();
+        String nameChoice = in.nextLine();
 
-        Email eml = new Email(nameChoice, lastnameChoice);
+        System.out.println("Enter Lastname : ");
+        String lastNameChoice = in.nextLine();
+
+        Email eml = new Email(nameChoice, lastNameChoice);
         eml.setAlternateEmail("js@gmail.com");
         System.out.println(eml.getAlternateEmail());
         System.out.println(eml.showInfo());
