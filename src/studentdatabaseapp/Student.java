@@ -6,7 +6,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String gradeYear;
-    private int studentID;
+    private String studentID;
     private String courses;
     private String tuitionBalance;
     private static int constOfCourse = 600;
@@ -23,15 +23,16 @@ public class Student {
 
         this.gradeYear = setGradeYear();
 
-        System.out.println(firstName + " " + lastName + " " + gradeYear);
+        setStudentId();
+        System.out.println(firstName + " " + lastName + " " + gradeYear + studentID );
 
-        id++;
+
     }
 
     private String setGradeYear() {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Student class level :\n1 - Freshmen\n2 - Junior\n3 - Senior\nEnter student class Code : ");
+        System.out.println("Student class level :\n1 - Freshmen\n2 - Junior\n3 - Senior\nEnter student class level : ");
 
         int chooseGradeYear = in.nextInt();
 
@@ -45,5 +46,11 @@ public class Student {
             return "Not enrolled";
         }
 
+
+    }
+
+    private String setStudentId(){
+        id++;
+        return this.studentID =  gradeYear + id;
     }
 }
