@@ -15,6 +15,9 @@ public class EmailApp {
         String lastnameChoice = lastname.next();
 
         Email eml = new Email(nameChoice, lastnameChoice);
+        eml.setAlternateEmail("js@gmail.com");
+        System.out.println(eml.getAlternateEmail());
+        System.out.println(eml.showInfo());
 
     }
 }
